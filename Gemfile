@@ -32,6 +32,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
+gem 'aws-sdk', '~> 2.3'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
