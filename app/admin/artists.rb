@@ -2,7 +2,7 @@ ActiveAdmin.register Artist do
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
-permit_params :artist_type, :name1, :name2, :playlist, :facebook, :instagram, :twitter, :about, :gigwell_id, :image, :artist
+permit_params :artist_type, :name1, :name2, :playlist, :facebook, :instagram, :twitter, :about, :gigwell_id, :image, :gigwell_number, :artist
 #
 # or
 #
