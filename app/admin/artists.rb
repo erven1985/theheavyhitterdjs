@@ -35,6 +35,7 @@ permit_params :artist_type, :name1, :name2, :playlist, :facebook, :instagram, :t
       f.input :twitter
       f.input :instagram
       f.input :gigwell_id
+      f.input :gigwell_number
       f.input :about
       f.input :image, required: true, as: :file
     end
