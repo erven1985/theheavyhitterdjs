@@ -12,7 +12,7 @@
       
         <div class="image_bio" style=" max-height: 400px;overflow: hidden">
       <%= image_tag @artist.image.url, class: 'myimage' %></div>
-      <div class="sicon_book"  id="gigwell-container" onclick="gigwell.open()"></div>
+      <div class="sicon_book"  id="gigwell-container" onclick="test()"></div>
       <div class="social_bios">
       <div class="sicon">
         <a href="<%= @artist.facebook %>" target="_blank"><img src="../images/fb_ar.png"></a>
@@ -45,12 +45,22 @@
 </div>
 <!-- Place this code somewhere in your HTML document, or Site Configuration. -->
 <script type="text/javascript">
-var gigwell_id = '<%= @artist.gigwell_id %>';
-var script = document.createElement('script');var f = document.getElementsByTagName('script')[0];script.async = 1;script.defer = 1;script.src = location.protocol + '//connect.gigwell.com/booknow/widget.js?'+gigwell_id+'?' + new Date().valueOf();script.id = 'booking-script';f.parentNode.insertBefore(script, f);window.gigwell = {};gigwell.apiUrl = "https://api.gigwell.com";gigwell.formDisplayMode = "modal";gigwell.agencyId = "116222";gigwell.artistId = "116264";gigwell.buttonName = "Book Artist";gigwell.submitName = "Book Now";gigwell.headline = "Booking Request";gigwell.hideHeadline = "false";
+var gigwell_id = '<%= @artist.gigwell_id %>',
+    artID = '116264'
+var script = document.createElement('script');var f = document.getElementsByTagName('script')[0];script.async = 1;script.defer = 1;script.src = location.protocol + '//connect.gigwell.com/booknow/widget.js?'+gigwell_id+'?' + new Date().valueOf();script.id = 'booking-script';f.parentNode.insertBefore(script, f);window.gigwell = {};gigwell.apiUrl = "https://api.gigwell.com";gigwell.formDisplayMode = "modal";gigwell.agencyId = "116222";gigwell.artistId = artID;gigwell.buttonName = "Book Artist";gigwell.submitName = "Book Now";gigwell.headline = "Booking Request";gigwell.hideHeadline = "false";
+function test() {
+  gigwell.open()
+  setTimeout(function() {
+    $('.booking-form').css('overflow','scroll !important');
+  },1000);
+}
 </script>
 
 <!-- You can customize the booking button through css here -->
 <style type="text/css">
+.booking-form {
+  overflow: scroll !important;
+}
 #gigwell-container .booking {
     color: white;
     background: #840338 !important;
