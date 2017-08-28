@@ -14,7 +14,7 @@ $(document).scroll(function() {
   
 });
 	
-$(document).ready(function(){
+$(document).on('turbolinks:load', function(){
 
 		$('.artist_home').css('opacity', '0');
 
@@ -141,7 +141,7 @@ $(document).ready(function(){
 	
 });
 	
-$(document).ready(function(){
+$(document).on('turbolinks:load', function(){
     $(".on-air").click(function(){
         
 		$('.content_sub').fadeIn('slow');
