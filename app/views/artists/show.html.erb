@@ -1,0 +1,76 @@
+          </div>
+      </div>
+   </div>
+
+
+<div class="general_cont_b">
+
+  
+  
+  <div class="column_mid">
+     <div class="column_left">
+      
+        <div class="image_bio" style=" max-height: 400px;overflow: hidden">
+      <%= image_tag @artist.image.url, class: 'myimage' %></div>
+      <div class="sicon_book"  id="gigwell-container" onclick="gigwell.open()"></div>
+      <div class="social_bios">
+      <div class="sicon">
+        <a href="<%= @artist.facebook %>" target="_blank"><img src="../images/fb_ar.png"></a>
+      </div>
+      <div class="sicon">
+      <a href="<%= @artist.twitter %>" target="_blank"><img src="../images/tw_Ar.png"></a>
+      </div>
+      <div class="sicon">
+      <a href="<%= @artist.instagram %>" target="_blank"><img src="../images/ig_ar.png"></a>
+      </div>
+      
+      
+      </div>
+      
+     </div>  
+    
+       <div class="bio_cont">
+           <div class="news_post_title">
+           <br><br>
+            <span class="name_news"> <%= @artist.name1 %> &nbsp;</span> <%= @artist.name2 %>
+          </div>
+          <br><br>
+             <%= @artist.playlist.html_safe %>
+              <div class="bios_int">
+          <p><%= @artist.about %></p>
+       </div>
+       </div>   
+    </div>
+  </div>      
+</div>
+<!-- Place this code somewhere in your HTML document, or Site Configuration. -->
+<script type="text/javascript">
+var gigwell_id = '<%= @artist.gigwell_id %>';
+var script = document.createElement('script');var f = document.getElementsByTagName('script')[0];script.async = 1;script.defer = 1;script.src = location.protocol + '//connect.gigwell.com/booknow/widget.js?'+gigwell_id+'?' + new Date().valueOf();script.id = 'booking-script';f.parentNode.insertBefore(script, f);window.gigwell = {};gigwell.apiUrl = "https://api.gigwell.com";gigwell.formDisplayMode = "modal";gigwell.agencyId = "116222";gigwell.artistId = "116264";gigwell.buttonName = "Book Artist";gigwell.submitName = "Book Now";gigwell.headline = "Booking Request";gigwell.hideHeadline = "false";
+</script>
+
+<!-- You can customize the booking button through css here -->
+<style type="text/css">
+#gigwell-container .booking {
+    color: white;
+    background: #840338 !important;
+    outline: none;
+    border: 0;
+    line-height: 36px;
+    min-height: 36px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-style: inherit;
+    font-variant: inherit;
+    font-family: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    letter-spacing: 0.01em;
+    border-radius: 3px;
+    border-color:  #840338 !important;
+    box-shadow: none !important;
+}
+.sicon_book {
+  cursor: pointer !important;
+}
+</style>

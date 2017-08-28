@@ -1,0 +1,35 @@
+				<div class="mainmenu">
+          <ul style="margin-right: auto;margin-left:auto; width:494px">
+           
+           <li class="bttn_all"> ALL</li>
+          <li> /</li>
+          <li class="bttn_east"> EAST</li>
+          <li> /</li>
+          <li class="bttn_west"> WEST</li>
+          <li> /</li>
+          <li class="bttn_midwest"> MIDWEST</li>
+          <li> /</li>
+          <li class="bttn_south"> SOUTH</li>
+          <li> /</li>
+          <li class="bttn_international"> INTERNATIONAL</li>
+          
+          </ul>
+        </div>
+        </div>
+      </div>
+   </div>
+      
+      <div class="general_cont" style="margin-top: 200px;">
+	     
+	     <!-- DJs in alphabetic oreder -->
+	     <% @artists.each do |artist| %>
+		     <div class="artist_home <%= artist.artist_type %>" >
+		     	<a href="/artists/<%= artist.id %>"><%= image_tag artist.image.url %>
+						<div class="hoverImg" style="color:white">
+		                 <p class="hover_artist_name"><%= artist.name1 %> <%= artist.name2 %></p>
+	          </div>
+		     	</a>
+		     </div>
+	     <% end %>
+	
+</div>

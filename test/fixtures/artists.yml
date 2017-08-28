@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  artist_type: MyString
+  name1: MyString
+  name2: MyString
+  playlist: MyString
+  facebook: MyString
+  instagram: MyString
+  twitter: MyString
+  about: MyText
+  gigwell_id: MyString
+
+two:
+  artist_type: MyString
+  name1: MyString
+  name2: MyString
+  playlist: MyString
+  facebook: MyString
+  instagram: MyString
+  twitter: MyString
+  about: MyText
+  gigwell_id: MyString
