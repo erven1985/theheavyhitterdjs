@@ -15,13 +15,19 @@
       <div class="sicon_book" onclick="test()">Book artist<span id="gigwell-container"></span></div>
       <div class="social_bios">
       <div class="sicon">
+      <% if @artist.facebook %>
         <a href="<%= @artist.facebook %>" target="_blank"><img src="../images/fb_ar.png"></a>
+      <% end %>
       </div>
       <div class="sicon">
+      <% if @artist.twitter %>
       <a href="<%= @artist.twitter %>" target="_blank"><img src="../images/tw_Ar.png"></a>
+      <% end %>
       </div>
       <div class="sicon">
+      <% if @artist.instagram %>
       <a href="<%= @artist.instagram %>" target="_blank"><img src="../images/ig_ar.png"></a>
+      <% end %>
       </div>
       
       
