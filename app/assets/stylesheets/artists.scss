@@ -201,7 +201,6 @@ a{
 
 .general_cont{
 	width:95%;
-	// min-height:100vh;
 	margin-left:auto;
 	margin-right:auto;
 	background-color: white;
@@ -212,7 +211,7 @@ a{
 
 .general_cont_b{
 	width:95%;
-	min-height:100vh;
+	max-height:1000px;
 	margin-left:auto;
 	margin-right:auto;
 	background-color: white;
