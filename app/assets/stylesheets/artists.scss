@@ -30,6 +30,9 @@
   src: url('../fonts/Calibri.ttf') format("truetype") ; 
 }
 
+html {
+	position:relative;
+}
 a:hover, a:visited, a:focus, a:active {
 	background:transparent !important;
 }
@@ -209,7 +212,7 @@ a{
 
 .general_cont_b{
 	width:95%;
-	max-height:1000px;
+	max-height:100vh;
 	margin-left:auto;
 	margin-right:auto;
 	background-color: white;
