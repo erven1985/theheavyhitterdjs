@@ -14,7 +14,7 @@
       
         <div class="image_bio" style=" max-height: 400px;overflow: hidden">
       <%= image_tag @artist.image.url, class: 'myimage' %></div>
-      <div class="sicon_book" onclick="test()">Book artist<span id="gigwell-container"></span></div>
+      <div class="sicon_book" onclick="test()">Book &nbsp;<%= [@artist.name1, @artist.name2].join(' ') %><span id="gigwell-container"></span></div>
       <div class="social_bios">
       <div class="sicon">
       <% if @artist.facebook %>
